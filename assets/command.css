@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************
+*  PDXfixIT CSS Framework  *
+****************************
+*        Change Log        *
+****************************
+*     -= 2009-06-25 =-     *
+*       Version 1.0        *
+*     -= 2009-06-28 =-     *
+*      Added Display       *
+*     -= 2009-07-17 =-     *
+* Put back larger, smaller *
+*    added more classes    *
+*     -= 2009-07-30 =-     *
+*  Added text-decoration   *
+***************************/
+
+.inline { display:inline; }
+.block { display:block; }
+.runin { display:run-in; }
+.invisible,.hidden { display:none; }
+.floatl,.floatleft,.leftfloat { float:left; }
+.floatr,.floatright,.rightfloat { float:right; }
+.wide { width:100%; }
+.wide99 { width:99%; }
+.wide95 { width:95%; }
+.wide90 { width:90%; }
+.wide85 { width:85%; }
+.wide80 { width:80%; }
+.wide75 { width:75%; }
+.wide70 { width:70%; }
+.wide66 { width:66%; }
+.wide65 { width:65%; }
+.wide60 { width:60%; }
+.wide55 { width:55%; }
+.wide50 { width:50%; }
+.wide45 { width:45%; }
+.wide40 { width:40%; }
+.wide35 { width:35%; }
+.wide33 { width:33%; }
+.wide30 { width:30%; }
+.wide25 { width:25%; }
+.wide20 { width:20%; }
+.wide19 { width:19%; }
+.wide18 { width:18%; }
+.wide17 { width:17%; }
+.wide16 { width:16%; }
+.wide15 { width:15%; }
+.wide14 { width:14%; }
+.wide13 { width:13%; }
+.wide12 { width:12%; }
+.wide11 { width:11%; }
+.wide10 { width:10%; }
+.wide9 { width:9%; }
+.wide8 { width:8%; }
+.wide7 { width:7%; }
+.wide6 { width:6%; }
+.wide5 { width:5%; }
+.wide4 { width:4%; }
+.wide3 { width:3%; }
+.wide2 { width:2%; }
+.wide1 { width:1%; }
+.wide0 { width:0%; }
+.italic { font-style:italic; }
+.oblique { font-style:oblique; }
+.bold,.strong { font-weight:bold; }
+.bolder { font-weight:bolder; }
+.xxsmall { font-size:xx-small; }
+.xsmall { font-size:x-small; }
+.smaller { font-size:smaller; }
+.small { font-size:small; }
+.medium { font-size:medium; }
+.large { font-size:large; }
+.larger { font-size:larger; }
+.xlarge { font-size:x-large; }
+.xxlarge { font-size:xx-large; }
+.vtop,.topalign,.aligntop { vertical-align:top; }
+.vmiddle,.middlealign,.alignmiddle { vertical-align:middle; }
+.vbottom,.bottomalign,.alignbottom { vertical-align:bottom; }
+.rightalign,.alignright,.textright { text-align:right; }
+.leftalign,.alignleft,.textleft { text-align:left; }
+.centeralign,.aligncenter,.textcenter { text-align:center; }
+.justify,.textjustify,.justified { text-align:justify; }
+.leftpos,.left { left:0; }
+.rightpos,.right { right:0; }
+.toppos,.top { top:0; }
+.bottompos,.bottom { bottom:0; }
+.border { border:1px solid black; }
+.borderleft { border-left:1px solid black; }
+.borderright { border-right:1px solid black; }
+.bordertop { border-top:1px solid black; }
+.borderbottom { border-bottom:1px solid black; }
+.noborder { border:none; }
+.noborderleft { border-left:none; }
+.noborderright { border-right:none; }
+.nobordertop { border-top:none; }
+.noborderbottom { border-bottom:none; }
+.nomargin { margin:0; }
+.nopadding { padding:0; }
+.nounderline { text-decoration:none; }
+.z0 { z-index:0; }
+.z1 { z-index:1; }
+.z5 { z-index:5; }
+.z10 { z-index:10; }
+.z100 { z-index:100; }
+.z1000 { z-index:1000; }
+
+.error {
+    background-color:red;
+    font-weight:bold;
+    color:white;
+}

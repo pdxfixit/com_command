@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<extension type="component" version="2.5.0" method="upgrade" client="site">
+    <name>COM_COMMAND</name>
+    <creationDate>August 2012</creationDate>
+    <author>PDXfixIT, LLC</author>
+    <copyright>Copyleft (c) 2012, PDXfixIT, LLC</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>support@pdxfixit.com</authorEmail>
+    <authorUrl>http://www.pdxfixit.com/</authorUrl>
+    <version>1.0 ALPHA</version>
+    <description><![CDATA[<img src="http://updates.pdxfixit.com/logo.png" alt="PDXfixIT" /><br />Version: 1.0 ALPHA<br />Release Date: August 2012<br />Command Component]]></description>
+    
+    <files folder="">
+        <filename>index.html</filename>
+        <filename>command.php</filename>
+        <filename>controller.php</filename>
+        <folder>assets</folder>
+        <folder>helpers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>tables</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>command.php</filename>
+            <folder>language</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+        </files>
+        
+        <menu link="" view="" img="">COM_COMMAND</menu>
+        
+        <submenu>
+            <menu link="" view="" img="">COM_COMMAND_SUBMENU_ITEM</menu>
+        </submenu>
+        
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_command.ini</language>
+            <language tag="en-GB">language/en-GB.com_command.sys.ini</language>
+        </languages>
+    </administration>
+
+    <languages folder="">
+        <language tag="en-GB">language/en-GB.com_command.ini</language>
+    </languages>
+
+    <config>
+        <fieldset name="">
+            <field type=""></field>
+        </fieldset>
+    </config>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+            <file driver="mysql">sql/install.sql</file>
+            <file driver="mysqli" charset="utf8">sql/install.sql</file>
+            <file driver="mysqli">sql/install.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+            <file driver="mysql">sql/uninstall.sql</file>
+            <file driver="mysqli" charset="utf8">sql/uninstall.sql</file>
+            <file driver="mysqli">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    
+    <scriptfile></scriptfile>
+    
+    <updateservers>
+        <server type="" priority="" name="">http://updates.pdxfixit.com/update.xml</server>
+    </updateservers>
+</extension>
