@@ -1,9 +1,8 @@
 <?php
+
 defined('_JEXEC') or die('Access Restricted');
-?>
 
-<!-- a little HTML magic here -->
+// load tooltip behavior
+JHtml::_('behavior.tooltip');
 
-<?php echo var_dump($this->params); ?>
-
-<jdoc include type="message" />
+echo JText::_('Settings can be changed from the toolbar button above.');

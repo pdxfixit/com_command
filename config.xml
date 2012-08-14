@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fieldset name="component">
+        <field name="enhancedCost" type="text" label="ENHANCED_COST" default="30" />
+    </fieldset>
+</config>

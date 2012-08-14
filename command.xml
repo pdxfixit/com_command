@@ -3,57 +3,48 @@
     <name>COM_COMMAND</name>
     <creationDate>August 2012</creationDate>
     <author>PDXfixIT, LLC</author>
-    <copyright>Copyleft (c) 2012, PDXfixIT, LLC</copyright>
-    <license>GNU General Public License version 2 or later</license>
     <authorEmail>support@pdxfixit.com</authorEmail>
     <authorUrl>http://www.pdxfixit.com/</authorUrl>
+    <copyright>Copyleft (c) 2012, PDXfixIT, LLC</copyright>
+    <license>GNU General Public License version 2 or later</license>
     <version>1.0 ALPHA</version>
     <description><![CDATA[<img src="http://updates.pdxfixit.com/logo.png" alt="PDXfixIT" /><br />Version: 1.0 ALPHA<br />Release Date: August 2012<br />Command Component]]></description>
     
-    <files folder="">
+    <files>
         <filename>index.html</filename>
-        <filename>command.php</filename>
-        <filename>controller.php</filename>
-        <folder>assets</folder>
-        <folder>helpers</folder>
-        <folder>language</folder>
-        <folder>models</folder>
-        <folder>tables</folder>
-        <folder>views</folder>
     </files>
 
     <administration>
-        <files folder="admin">
+        <files>
             <filename>index.html</filename>
+            <filename>command.php</filename>
             <filename>config.xml</filename>
             <filename>controller.php</filename>
-            <filename>command.php</filename>
-            <folder>language</folder>
             <folder>sql</folder>
             <folder>views</folder>
         </files>
         
-        <menu link="" view="" img="">COM_COMMAND</menu>
+        <menu>COM_COMMAND</menu>
         
         <submenu>
-            <menu link="" view="" img="">COM_COMMAND_SUBMENU_ITEM</menu>
+            <menu view="subitem">COM_COMMAND_SUBMENU_ITEM</menu>
         </submenu>
         
-        <languages folder="admin">
+        <languages>
             <language tag="en-GB">language/en-GB.com_command.ini</language>
             <language tag="en-GB">language/en-GB.com_command.sys.ini</language>
         </languages>
     </administration>
 
-    <languages folder="">
+    <media destination="com_command" folder="assets">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <languages>
         <language tag="en-GB">language/en-GB.com_command.ini</language>
     </languages>
-
-    <config>
-        <fieldset name="">
-            <field type=""></field>
-        </fieldset>
-    </config>
 
     <install>
         <sql>
@@ -73,9 +64,7 @@
         </sql>
     </uninstall>
     
-    <scriptfile></scriptfile>
-    
     <updateservers>
-        <server type="" priority="" name="">http://updates.pdxfixit.com/update.xml</server>
+        <server type="extension" priority="1" name="PDXfixIT Updates">http://updates.pdxfixit.com/com_command-update.xml</server>
     </updateservers>
 </extension>

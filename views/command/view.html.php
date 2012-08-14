@@ -7,21 +7,13 @@ jimport('joomla.application.component.view');
 class CommandViewCommand extends JView {
 
     public function display($tpl = null) {
-        $app = JFactory::getApplication();
-        $doc = JFactory::getDocument();
-        
-        $this->loadHelper('command');
-        
-        $params = $app->getParams();
-
-        $doc->addStyleSheet($this->baseurl . '/components/com_command/assets/command.css');
-        $doc->addStyleDeclaration('#command { display:none; }');   
-        $doc->addScriptDeclaration('var command = true;');
-        $doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js');
-
-        $this->assignRef('params', $params);
+        JToolBarHelper::title(JText::_('COM_COMMAND_ADMINISTRATION_TITLE'), 'command');
+        JToolBarHelper::preferences('com_command', '500');
         
         parent::display($tpl);
+        
+        $document = JFactory::getDocument();
+        $document->setTitle(JText::_('COM_COMMAND_ADMINISTRATION'));
     }
 
 }
