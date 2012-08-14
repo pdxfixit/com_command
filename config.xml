@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <fieldset name="component">
-        <field name="enhancedCost" type="text" label="ENHANCED_COST" default="30" />
+        <field name="token" type="text" label="COM_COMMAND_TOKEN" default="ben" />
     </fieldset>
 </config>

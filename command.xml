@@ -16,10 +16,10 @@
 
     <administration>
         <files>
-            <filename>index.html</filename>
             <filename>command.php</filename>
             <filename>config.xml</filename>
             <filename>controller.php</filename>
+            <filename>index.html</filename>
             <folder>sql</folder>
             <folder>views</folder>
         </files>
@@ -27,12 +27,13 @@
         <menu>COM_COMMAND</menu>
         
         <submenu>
-            <menu view="subitem">COM_COMMAND_SUBMENU_ITEM</menu>
+            <menu view="sites">COM_COMMAND_SITES</menu>
+            <menu view="updates">COM_COMMAND_UPDATES</menu>
         </submenu>
         
         <languages>
-            <language tag="en-GB">language/en-GB.com_command.ini</language>
-            <language tag="en-GB">language/en-GB.com_command.sys.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_command.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_command.sys.ini</language>
         </languages>
     </administration>
 
@@ -43,7 +44,7 @@
     </media>
 
     <languages>
-        <language tag="en-GB">language/en-GB.com_command.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.com_command.ini</language>
     </languages>
 
     <install>
