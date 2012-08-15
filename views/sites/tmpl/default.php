@@ -51,10 +51,13 @@ $listDirn = $this->escape($this->state->get('list.direction'));
                     <?php echo JHtml::_('grid.sort', 'COM_COMMAND_ENABLED', 'published', $listDirn, $listOrder); ?>
                 </th>
                 <th>
-                    <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_LINK_URL', 'url', $listDirn, $listOrder); ?>
+                    <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_URL', 'url', $listDirn, $listOrder); ?>
+                </th>
+                <th>
+                    <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_UPDATES', 'updates', $listDirn, $listOrder); ?>
                 </th>
                 <th width="10%">
-                    <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_LAST_UPDATE', 'lastupdated', $listDirn, $listOrder); ?>
+                    <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_LAST_UPDATED', 'lastupdated', $listDirn, $listOrder); ?>
                 </th>
                 <th width="5%">
                     <?php echo JHtml::_('grid.sort', 'COM_COMMAND_SITES_HEADING_ID', 'id', $listDirn, $listOrder); ?>
@@ -65,7 +68,7 @@ $listDirn = $this->escape($this->state->get('list.direction'));
             <?php if (count($this->items) == 0): ?>
                 <tr class="row0">
                     <td align="center" colspan="7">
-                        <?php echo JText::_('COM_COMMAND_SITES_NO_SITES'); ?>
+                        <?php echo JText::_('COM_COMMAND_NO_SITES'); ?>
                     </td>
                 </tr>
             <?php endif; ?>
@@ -82,7 +85,7 @@ $listDirn = $this->escape($this->state->get('list.direction'));
                             <a href="<?php echo JRoute::_('index.php?option=com_command&task=site.edit&id=' . (int) $item->id); ?>">
                                 <?php echo $this->escape($item->title); ?>
                             </a>
-                        <?php
+                            <?php
                         } else {
                             echo $this->escape($item->title);
                         }
@@ -101,19 +104,22 @@ $listDirn = $this->escape($this->state->get('list.direction'));
                         ?>
                     </td>
                     <td class="center nowrap">
-    <?php echo JHtml::_('date', $item->lastupdated, JText::_('DATE_FORMAT_LC4')); ?>
+                        <?php echo $this->updates; ?>
+                    </td>
+                    <td class="center nowrap">
+                        <?php echo JHtml::_('date', $item->lastupdated, JText::_('DATE_FORMAT_LC4')); ?>
                     </td>
                     <td class="center nowrap">
                         <?php echo $item->id; ?>
                     </td>
                 </tr>
 
-<?php endforeach; ?>
+            <?php endforeach; ?>
         </tbody>
         <tfoot>
             <tr>
                 <td colspan="7" class="nowrap">
-<?php echo $this->pagination->getListFooter(); ?>
+                    <?php echo $this->pagination->getListFooter(); ?>
                 </td>
             </tr>
         </tfoot>
@@ -123,5 +129,5 @@ $listDirn = $this->escape($this->state->get('list.direction'));
     <input type="hidden" name="boxchecked" value="0" />
     <input type="hidden" name="filter_order" value="<?php echo $listOrder ?>" />
     <input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn ?>" />
-<?php echo JHtml::_('form.token'); ?>
+    <?php echo JHtml::_('form.token'); ?>
 </form>

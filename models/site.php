@@ -50,5 +50,21 @@ class CommandModelSite extends JModelAdmin {
             // Set the values
         }
     }
+    
+    private function _connectSite() {
+        
+    }
+
+    public function updateSite($id) {
+        // get the record
+        $item = $this->getItem($id);
+        
+        // poll the site
+        $payload = file_get_contents($item->url);
+        
+        die(var_export($payload,1));
+        
+        // if successful, update the timestamp in the database, and return true
+    }
 
 }

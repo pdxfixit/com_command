@@ -58,6 +58,10 @@ class CommandModelSites extends JModelList {
         return parent::getStoreId($id);
     }
 
+    public function getUpdates() {
+        
+    }
+
     protected function populateState($ordering = null, $direction = null) {
         // Load the filter state.
         $search = $this->getUserStateFromRequest($this->context . '.filter.search', 'filter_search');

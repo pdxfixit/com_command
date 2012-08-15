@@ -13,9 +13,9 @@ class CommandHelper {
         JSubMenuHelper::addEntry(
                 JText::_('COM_COMMAND_SUBMENU_SITES'), 'index.php?option=com_command&view=sites', $currentViewName == 'sites'
         );
-        JSubMenuHelper::addEntry(
-                JText::_('COM_COMMAND_SUBMENU_UPDATES'), 'index.php?option=com_command&view=updates', $currentViewName == 'updates'
-        );
+//        JSubMenuHelper::addEntry(
+//                JText::_('COM_COMMAND_SUBMENU_UPDATES'), 'index.php?option=com_command&view=updates', $currentViewName == 'updates'
+//        );
     }
 
     public static function getActions() {
