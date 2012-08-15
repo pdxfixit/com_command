@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?> 
 <extension type="component" version="2.5.0" method="upgrade" client="site">
     <name>COM_COMMAND</name>
-    <creationDate>August 2012</creationDate>
     <author>PDXfixIT, LLC</author>
+    <creationDate>August 2012</creationDate>
     <authorEmail>support@pdxfixit.com</authorEmail>
     <authorUrl>http://www.pdxfixit.com/</authorUrl>
     <copyright>Copyleft (c) 2012, PDXfixIT, LLC</copyright>
     <license>GNU General Public License version 2 or later</license>
     <version>1.0 ALPHA</version>
-    <description><![CDATA[<img src="http://updates.pdxfixit.com/logo.png" alt="PDXfixIT" /><br />Version: 1.0 ALPHA<br />Release Date: August 2012<br />Command Component]]></description>
+    <description><![CDATA[<img src="http://updates.pdxfixit.com/logo.png" alt="PDXfixIT" /><br />Version: 1.0 ALPHA<br />Release Date: August 2012<br />Command Component]]>
+    </description>
     
     <files>
         <filename>index.html</filename>
@@ -16,15 +17,19 @@
 
     <administration>
         <files>
+            <filename>access.xml</filename>
             <filename>command.php</filename>
             <filename>config.xml</filename>
             <filename>controller.php</filename>
             <filename>index.html</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
             <folder>sql</folder>
+            <folder>tables</folder>
             <folder>views</folder>
         </files>
         
-        <menu>COM_COMMAND</menu>
+        <menu link="option=com_command">COM_COMMAND</menu>
         
         <submenu>
             <menu view="sites">COM_COMMAND_SITES</menu>
@@ -41,10 +46,11 @@
         <folder>css</folder>
         <folder>images</folder>
         <folder>js</folder>
+        <filename>index.html</filename>
     </media>
 
-    <languages>
-        <language tag="en-GB">language/en-GB/en-GB.com_command.ini</language>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.com_command.ini</language>
     </languages>
 
     <install>

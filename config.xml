@@ -3,4 +3,7 @@
     <fieldset name="component">
         <field name="token" type="text" label="COM_COMMAND_TOKEN" default="ben" />
     </fieldset>
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC" >
+        <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" validate="rules" component="com_command" section="component" />
+    </fieldset>
 </config>
