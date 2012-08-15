@@ -6,13 +6,13 @@ jimport('joomla.application.component.model');
 
 JTable::addIncludePath(JPATH_COMPONENT . DS . 'tables');
 
-class GenericModelGeneric extends JModel {
+class CommandModelSites extends JModel {
 
     private $_table = null;
 
     public function __construct() {
         parent::__construct();
-        $this->_table = & JTable::getInstance('Generic', 'Table');
+        $this->_table = & JTable::getInstance('Sites', 'Table');
     }
 
 }
