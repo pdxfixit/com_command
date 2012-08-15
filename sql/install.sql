@@ -1,8 +1,18 @@
-CREATE TABLE IF NOT EXISTS `#__command` (
-`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY
-,`user_id` INT NOT NULL COMMENT 'J! User ID'
-,`stuff` BOOLEAN NOT NULL
-,`checked_out` int(11) unsigned NOT NULL DEFAULT '0'
-,`checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-,`updated` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE = MYISAM DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `#__command_sites` (
+`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+,`title` varchar(255) NOT NULL
+,`url` varchar(255) NOT NULL
+,`published` tinyint(1) NOT NULL
+,`verified` tinyint(1) NOT NULL
+,`lastupdated` datetime NOT NULL COMMENT 'When were updates last performed on the site'
+,`updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+, PRIMARY KEY (`id`)
+) ENGINE=MYISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `#__command_updates` (
+`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+,`site_id` int(11) NOT NULL
+,`json` text
+,`updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+, PRIMARY KEY (`id`)
+) ENGINE=MYISAM DEFAULT CHARSET=utf8;
