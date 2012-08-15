@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die;
 
-class TableUpdates extends JTable {
+class CommandTableUpdate extends JTable {
 
 	public $user_id = null;
 	public $updated = null;

@@ -1,6 +1,6 @@
 <?php
 
-defined('_JEXEC') or die('Access Restricted');
+defined('_JEXEC') or die;
 
 // load tooltip behavior
 JHtml::_('behavior.tooltip');

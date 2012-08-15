@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+               readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+
+        <field name="title" type="text" class="inputbox"
+               size="40" label="JGLOBAL_TITLE"
+               description="COM_COMMAND_SITES_TITLE_FIELD_DESC" required="true" />
+
+        <field name="url" type="url" class="inputbox"
+               filter="url"
+               size="40" label="COM_COMMAND_SITES_URL_FIELD_LABEL"
+               description="COM_COMMAND_SITES_URL_FIELD_DESC" required="true" />
+
+        <field
+            name="published"
+            type="list"
+            label="JSTATUS"
+            description="COM_COMMAND_SITES_STATE_FIELD_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">COM_COMMAND_ENABLED</option>
+            <option value="0">COM_COMMAND_DISABLED</option>
+        </field>
+    </fieldset>
+</form>

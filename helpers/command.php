@@ -5,6 +5,8 @@ defined('_JEXEC') or die;
 class CommandHelper {
 
     public function addSubmenu($currentViewName) {
+        if (strtolower($currentViewName) == "site")
+            return;
         JSubMenuHelper::addEntry(
                 JText::_('COM_COMMAND_SUBMENU_COMMAND'), 'index.php?option=com_command&view=command', $currentViewName == 'command'
         );
