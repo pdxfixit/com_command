@@ -104,7 +104,7 @@ $listDirn = $this->escape($this->state->get('list.direction'));
                         ?>
                     </td>
                     <td class="center nowrap">
-                        <?php echo $this->updates; ?>
+                        <?php echo $this->prepareUpdates($item->updates); ?>
                     </td>
                     <td class="center nowrap">
                         <?php echo JHtml::_('date', $item->lastupdated, JText::_('DATE_FORMAT_LC4')); ?>

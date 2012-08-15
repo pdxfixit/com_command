@@ -21,6 +21,27 @@ class CommandControllerSite extends JControllerForm {
 
         return parent::batch($model);
     }
+    
+    public function refresh() {
+        // Set the model
+        $model = $this->getModel('Site', '', array());
+
+        // Get the update IDs
+        $input = JFactory::getApplication()->input;
+        $updates = $input->get('cid', null, 'array');
+        
+        foreach ($updates as $update) {
+            $success = $model->refreshSite((int) $update);
+            if (!$success) {
+                $this->setRedirect('index.php?option=com_command&view=sites', JText::sprintf('COM_COMMAND_ERR_SITE_X_REFRESH_FAIL', $update), 'error');
+                return;
+            } else {
+                continue;
+            }
+        }
+
+        $this->setRedirect('index.php?option=com_command&view=sites', JText::sprintf('COM_COMMAND_X_SITES_REFRESH_SUCCESS', count($updates)));
+    }
 
     public function update() {
         // Set the model
@@ -28,19 +49,19 @@ class CommandControllerSite extends JControllerForm {
 
         // Get the update IDs
         $input = JFactory::getApplication()->input;
-        $updates = $input->get('cid', null, 'array');
+        $sites = $input->get('cid', null, 'array');
 
-        foreach ($updates as $i => $update) {
-            $success = $model->updateSite((int) $update);
+        foreach ($sites as $siteId) {
+            $success = $model->updateSite((int) $siteId);
             if (!$success) {
-                $this->setRedirect('index.php?option=com_command&view=sites', 'Site #' . $i . ' failed to update.', 'error');
+                $this->setRedirect('index.php?option=com_command&view=sites', JText::sprintf('COM_COMMAND_ERR_SITE_X_UPDATE_FAIL', $siteId), 'error');
                 return;
             } else {
                 continue;
             }
         }
 
-        $this->setRedirect('index.php?option=com_command&view=sites', count($updates) . ' sites updated.');
+        $this->setRedirect('index.php?option=com_command&view=sites', JText::sprintf('COM_COMMAND_X_SITES_UPDATE_SUCCESS', count($sites)));
     }
 
 }

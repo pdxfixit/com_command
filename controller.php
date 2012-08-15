@@ -9,7 +9,7 @@ jimport('joomla.application.component.controller');
 class CommandController extends JController {
 
     public function display($cachable = false, $urlparams = false) {
-        include_once JPATH_COMPONENT . '/helpers/command.php';
+        require JPATH_COMPONENT . '/helpers/command.php';
 
         $input = JFactory::getApplication()->input;
 

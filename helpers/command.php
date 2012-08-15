@@ -17,8 +17,13 @@ class CommandHelper {
 //                JText::_('COM_COMMAND_SUBMENU_UPDATES'), 'index.php?option=com_command&view=updates', $currentViewName == 'updates'
 //        );
     }
+    
+    public function generateToken() {
+        $token = 'ben';
+        return $token;
+    }
 
-    public static function getActions() {
+    public function getActions() {
         $user = JFactory::getUser();
         $result = new JObject;
         $assetName = 'com_command';

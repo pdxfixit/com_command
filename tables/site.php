@@ -7,6 +7,7 @@ class CommandTableSite extends JTable {
     public $id = null;
     public $title = null;
     public $url = null;
+    public $updates = null;
     public $published = null;
     public $lastUpdated = null;
 
@@ -28,7 +29,7 @@ class CommandTableSite extends JTable {
         }
 
         // verify URL
-        if (!$this->verifySite($this->url)) {
+        if ($this->url = CommandModelSite::verifySite($this->url)) {
             $this->setError(JText::_('COM_COMMAND_ERR_TABLES_VERIFY_URL'));
             return false;
         }
@@ -41,10 +42,6 @@ class CommandTableSite extends JTable {
             unset($this->ordering);
         }
         return parent::store($updateNulls);
-    }
-
-    protected function verifySite($url) {
-        return true;
     }
 
 }

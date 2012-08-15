@@ -18,10 +18,6 @@ class CommandViewSites extends JView {
             return false;
         }
 
-        // Parse the updates
-        $updates = '[{"update_id":"2","update_site_id":"42","extension_id":"10120","categoryid":"0","name":"Gantry","description":"Gantry Framework","element":"lib_gantry","type":"library","folder":"","client_id":"0","version":"3.2.22","data":"","detailsurl":"http:\/\/www.gantry-framework.org\/updates\/joomla16\/gantry.xml","infourl":"http:\/\/www.gantry-framework.org"},{"update_id":"3","update_site_id":"6","extension_id":"10096","categoryid":"0","name":"RokSprocket","description":"","element":"mod_roksprocket","type":"module","folder":"","client_id":"0","version":"1.6.0","data":"","detailsurl":"http:\/\/updates.rockettheme.com\/joomla\/modules\/roksprocket.xml","infourl":""}]';
-        $this->updates = $this->_prepareUpdates($updates);
-        //JFactory::getApplication()->input->get('task', 'display', 'cmd')
         // Configure the toolbar.
         $this->addToolbar();
 
@@ -32,7 +28,7 @@ class CommandViewSites extends JView {
         parent::display($tpl);
     }
 
-    private function _prepareUpdates($updates) {
+    public function prepareUpdates($updates) {
         $json = json_decode($updates);
         if (!empty($json)) {
             $updatesHtml = '<ul>';
@@ -59,6 +55,7 @@ class CommandViewSites extends JView {
             JToolBarHelper::divider();
         }
         
+        JToolBarHelper::custom('site.refresh', 'refresh.png', 'refresh-over.png', 'COM_COMMAND_REFRESH', true);
         JToolBarHelper::custom('site.update', 'update.png', 'update-over.png', 'COM_COMMAND_UPDATE', true);
         JToolBarHelper::divider();
         
