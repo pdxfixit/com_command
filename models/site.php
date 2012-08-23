@@ -8,6 +8,14 @@ class CommandModelSite extends JModelAdmin {
 
     protected $text_prefix = 'COM_COMMAND';
 
+    public function conformUrl($url) {
+        $parsed = parse_url($url);
+        
+        $path = trim($parsed['path'], 'index.php'); 
+        
+        return $url;
+    }
+    
     public function getForm($data = array(), $loadData = true) {
         // Get the form.
         $form = $this->loadForm('com_command.site', 'site', array('control' => 'jform', 'load_data' => $loadData));

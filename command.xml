@@ -33,7 +33,6 @@
         
         <submenu>
             <menu view="sites">COM_COMMAND_SITES</menu>
-            <menu view="updates">COM_COMMAND_UPDATES</menu>
         </submenu>
         
         <languages>

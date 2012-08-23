@@ -27,9 +27,11 @@ class CommandTableSite extends JTable {
             $this->setError(JText::_('COM_COMMAND_ERR_TABLES_PROVIDE_URL'));
             return false;
         }
+        
+        $this->url = CommandModelSite::conformUrl($this->url);
 
         // verify URL
-        if ($this->url = CommandModelSite::verifySite($this->url)) {
+        if (CommandModelSite::verifySite($this->url)) {
             $this->setError(JText::_('COM_COMMAND_ERR_TABLES_VERIFY_URL'));
             return false;
         }
